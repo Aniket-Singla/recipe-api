@@ -11,7 +11,7 @@ RUN \
  apk upgrade --update && apk add --no-cache jpeg-dev zlib-dev  &&\
  python3 -m pip install -r requirements.txt --no-cache-dir && \
  apk --purge del .build-deps
-
+# RUN apk del .tmp-build-deps
 
 RUN mkdir /app
 WORKDIR /app
